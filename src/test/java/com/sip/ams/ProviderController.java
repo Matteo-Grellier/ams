@@ -11,7 +11,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.web.servlet.MockMvc;
 
 @WebMvcTest
-public class TestFirstController {
+public class ProviderController {
 
 	@Autowired
 	private MockMvc mockMvc;
@@ -19,13 +19,13 @@ public class TestFirstController {
 	@Test
 	public void Test_info() throws Exception {
 		this.mockMvc.perform(get("/infourl")).andExpect(status().isOk())
-				.andExpect(content().string(containsString("Ynov")));
+				.andExpect(content().string(containsString("Orange")));
 	}
 
 	@Test
 	public void Test_details() throws Exception {
 		this.mockMvc.perform(get("/details")).andExpect(status().isOk())
-				.andExpect(content().string(containsString("data")));
+				.andExpect(content().string(containsString("HP")));
 	}
 
 }

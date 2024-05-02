@@ -5,18 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class FirstController {
+public class ProviderController {
 
-	@GetMapping("/infourl")
+	@GetMapping("/infoprovider")
 	// @ResponseBody
-	public String information() {
-		return "first/info";
-	}
-
-	@GetMapping("/details")
-	// @ResponseBody
-	public String detailsFormation() {
-		return "first/details";
+	public String listProviders() {
+		return "provider/providers";
 	}
 
 }
